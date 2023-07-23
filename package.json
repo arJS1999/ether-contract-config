@@ -1,0 +1,35 @@
+{
+  "name": "demo_pac",
+  "version": "1.0.27",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "compile": "tsc",
+    "prebuildpackage": "npm run compile && node dist/index.js",
+    "buildpackage": "cd dist && npm pack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc -b",
+    "build:publish": "tsc -b && npm publish --access public",
+    "build": "npx -p typescript tsc src/**/*.js --declaration --allowJs --emitDeclarationOnly --outDir types"
+  },
+  "keywords": [
+    "Smart Contract",
+    "Node.js",
+    "Front end",
+    "Web3",
+    "Metamask wallet"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.7.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bala1067/demo_pac.git"
+  },
+  "dependencies": {
+    "ethers": "^5.6.8"
+  }
+}
